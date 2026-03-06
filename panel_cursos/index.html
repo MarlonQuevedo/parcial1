@@ -17,10 +17,17 @@
     </header>
 
     <nav class="nav">
-      <button class="nav-btn activo" data-seccion="inicio"> Inicio</button>
-      <button class="nav-btn" data-seccion="cursos"> Cursos</button>
-      <button class="nav-btn" data-seccion="calendario"> Calendario</button>
-      <button class="nav-btn" data-seccion="contacto">Contacto</button>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-content" id="navContent">
+        <button class="nav-btn activo" data-seccion="inicio"> Inicio</button>
+        <button class="nav-btn" data-seccion="cursos"> Cursos</button>
+        <button class="nav-btn" data-seccion="calendario"> Calendario</button>
+        <button class="nav-btn" data-seccion="contacto">Contacto</button>
+      </div>
     </nav>
 
     <main class="main">
@@ -74,7 +81,7 @@
 
             <article class="tarjeta-curso">
               <h4> Base de Datos I</h4>
-              <p><strong>Docente:</strong> Ana López</p>
+              <p><strong>Docente:</strong> Ana Lppez</p>
               <p><strong>Duración:</strong> 10 semanas</p>
               <button class="btn-eliminar"> Eliminar</button>
             </article>

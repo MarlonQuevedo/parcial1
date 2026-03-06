@@ -6,6 +6,8 @@ const listaCursos = document.getElementById('listaCursos');
 const contadorCursos = document.getElementById('contadorCursos');
 const botonesNav = document.querySelectorAll('.nav-btn');
 const secciones = document.querySelectorAll('.seccion');
+const menuToggle = document.getElementById('menuToggle');
+const navContent = document.getElementById('navContent');
 
 const errorNombre = document.getElementById('errorNombre');
 const errorDocente = document.getElementById('errorDocente');
@@ -58,6 +60,20 @@ function asignarEventoEliminar(boton) {
 }
 
 document.querySelectorAll('.btn-eliminar').forEach(asignarEventoEliminar);
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', function () {
+    menuToggle.classList.toggle('activo');
+    navContent.classList.toggle('visible');
+  });
+
+  botonesNav.forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      menuToggle.classList.remove('activo');
+      navContent.classList.remove('visible');
+    });
+  });
+}
 
 formCurso.addEventListener('submit', function (event) {
   event.preventDefault();

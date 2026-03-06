@@ -268,6 +268,43 @@ body {
   font-size: 1.5rem;
 }
 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+  padding: 6px;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.activo span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.activo span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.activo span:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.nav-content {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .contenedor-grid {
     grid-template-columns: 1fr;
@@ -287,6 +324,27 @@ body {
   .nav {
     flex-direction: column;
     align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .nav-content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-content.visible {
+    display: flex;
+  }
+
+  .nav-btn {
+    width: 100%;
   }
 
   .lista-cursos {
