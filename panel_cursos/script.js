@@ -13,7 +13,7 @@ const errorDuracion = document.getElementById('errorDuracion');
 
 function actualizarContador() {
   const total = document.querySelectorAll('.tarjeta-curso').length;
-  contadorCursos.textContent = `📊 Cursos disponibles: ${total}`;
+  contadorCursos.textContent = `Cursos disponibles: ${total}`;
 }
 
 function limpiarErrores() {
@@ -70,10 +70,10 @@ formCurso.addEventListener('submit', function (event) {
   tarjeta.classList.add('tarjeta-curso');
 
   tarjeta.innerHTML = `
-    <h4>📌 ${nombreCurso.value.trim()}</h4>
-    <p><strong>🧑‍🏫 Docente:</strong> ${docenteCurso.value.trim()}</p>
-    <p><strong>⏱️ Duración:</strong> ${duracionCurso.value.trim()}</p>
-    <button class="btn-eliminar">🗑️ Eliminar</button>
+    <h4> ${nombreCurso.value.trim()}</h4>
+    <p><strong>Docente:</strong> ${docenteCurso.value.trim()}</p>
+    <p><strong>Duración:</strong> ${duracionCurso.value.trim()}</p>
+    <button class="btn-eliminar">Eliminar</button>
   `;
 
   listaCursos.appendChild(tarjeta);
