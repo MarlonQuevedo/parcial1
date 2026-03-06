@@ -46,6 +46,13 @@ body {
   font-size: 32px;
 }
 
+.logo img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
 .header h1 {
   font-size: 2rem;
   margin-bottom: 6px;
