@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Cursos Universitarios</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="contenedor-grid">
+    <header class="header">
+      <div class="logo">🎓</div>
+      <div>
+        <h1>Universidad de Oriente</h1>
+        <p>Panel de Cursos Universitarios</p>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <button class="nav-btn activo" data-seccion="inicio"> Inicio</button>
+      <button class="nav-btn" data-seccion="cursos"> Cursos</button>
+      <button class="nav-btn" data-seccion="calendario"> Calendario</button>
+      <button class="nav-btn" data-seccion="contacto">Contacto</button>
+    </nav>
+
+    <main class="main">
+      <section id="inicio" class="seccion visible">
+        <h2>Inicio</h2>
+        <div class="bloque-contenido">
+          <h3>Misión</h3>
+          <p>Formar profesionales competentes, éticos e innovadores, comprometidos con el desarrollo académico y social.</p>
+        </div>
+        <div class="bloque-contenido">
+          <h3>Visión</h3>
+          <p>Ser una universidad reconocida por su excelencia académica, su innovación educativa y su aporte a la sociedad.</p>
+        </div>
+        <div class="bloque-contenido">
+          <h3>Valores</h3>
+          <ul>
+            <li>Excelencia</li>
+            <li>Innovación</li>
+            <li>Responsabilidad</li>
+          </ul>
+        </div>
+        <div class="bloque-contenido estadisticas">
+          <div class="dato">
+            <strong>25+</strong>
+            <span>Carreras</span>
+          </div>
+          <div class="dato">
+            <strong>120+</strong>
+            <span>Docentes</span>
+          </div>
+          <div class="dato">
+            <strong>3000+</strong>
+            <span>Estudiantes</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="cursos" class="seccion">
+        <h2>Cursos</h2>
+        <div class="contador-cursos" id="contadorCursos"> Cursos disponibles: 3</div>
+
+        <section class="subseccion">
+          <h3>Listado de cursos</h3>
+          <div class="lista-cursos" id="listaCursos">
+            <article class="tarjeta-curso">
+              <h4> Programación Web</h4>
+              <p><strong>Docente:</strong> Carlos Mejía</p>
+              <p><strong>Duración:</strong> 8 semanas</p>
+              <button class="btn-eliminar"> Eliminar</button>
+            </article>
+
+            <article class="tarjeta-curso">
+              <h4> Base de Datos I</h4>
+              <p><strong>Docente:</strong> Ana López</p>
+              <p><strong>Duración:</strong> 10 semanas</p>
+              <button class="btn-eliminar"> Eliminar</button>
+            </article>
+
+            <article class="tarjeta-curso">
+              <h4> Redes Informáticas</h4>
+              <p><strong>Docente:</strong> José Martínez</p>
+              <p><strong> Duración:</strong> 6 semanas</p>
+              <button class="btn-eliminar"> Eliminar</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="subseccion formulario-area">
+          <h3>➕ Agregar curso</h3>
+          <form id="formCurso" class="formulario-curso">
+            <div class="campo-formulario">
+              <label for="nombreCurso">Nombre del curso</label>
+              <input type="text" id="nombreCurso" placeholder="Ej. Desarrollo Frontend" />
+              <small class="error" id="errorNombre"></small>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="docenteCurso">Docente</label>
+              <input type="text" id="docenteCurso" placeholder="Ej. María González" />
+              <small class="error" id="errorDocente"></small>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="duracionCurso">Duración</label>
+              <input type="text" id="duracionCurso" placeholder='Ej. "8 semanas"' />
+              <small class="error" id="errorDuracion"></small>
+            </div>
+
+            <button type="submit" class="btn-agregar">Agregar curso</button>
+          </form>
+        </section>
+      </section>
+
+      <section id="calendario" class="seccion">
+        <h2>Calendario</h2>
+        <div class="bloque-contenido">
+          <ul>
+            <li>Inicio de clases: 20 de enero</li>
+            <li>Período de exámenes parciales: 10 al 15 de marzo</li>
+            <li>Días festivos: 1 de mayo, 15 de septiembre</li>
+            <li>Vacaciones programadas: 1 al 7 de agosto</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contacto" class="seccion">
+        <h2>Contacto</h2>
+        <div class="bloque-contenido">
+          <ul>
+            <li>Teléfonos: 2660-0000 / 2660-0001</li>
+            <li>Correo: info@univo.edu.sv</li>
+            <li>Dirección: Final 8a Avenida Sur, San Miguel, El Salvador</li>
+            <li>Horarios de atención: Lunes a Viernes, 8:00 a.m. - 5:00 p.m.</li>
+            <li>Redes sociales: Facebook, Instagram y YouTube</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <aside class="aside">
+      <h2>Información académica</h2>
+      <div class="info-aside">
+        <div class="item-aside">
+          <span>🗓️</span>
+          <div>
+            <h3>Calendario académico</h3>
+            <p>Fechas importantes del ciclo universitario.</p>
+          </div>
+        </div>
+        <div class="item-aside">
+          <span>📞</span>
+          <div>
+            <h3>Contacto</h3>
+            <p>Teléfonos y correo institucional.</p>
+          </div>
+        </div>
+        <div class="item-aside">
+          <span>📍</span>
+          <div>
+            <h3>Ubicación</h3>
+            <p>San Miguel, El Salvador.</p>
+          </div>
+        </div>
+        <div class="item-aside">
+          <span>⏰</span>
+          <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes de 8:00 a.m. a 5:00 p.m.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <p>© 2026 Universidad de Oriente | Síguenos en Facebook, Instagram y YouTube</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
