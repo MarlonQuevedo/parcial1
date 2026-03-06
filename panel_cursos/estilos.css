@@ -162,6 +162,11 @@ body {
   margin-bottom: 6px;
 }
 
+.dato:hover{
+  background-color: #b63d39;
+  transform: translateY(-3px);
+}
+
 .contador-cursos {
   background-color: #1d2b44;
   color: #ffd447;
